@@ -10,27 +10,130 @@ if(!isset($_SESSION['username']))
 
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Dashboard</title>
+
+    <title>LRPMS Dashboard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
 </head>
 
 <body>
 
-<h1>Welcome to Learner Rights and Protection Monitoring System</h1>
+<div class="sidebar">
 
-<h2>
-Logged in as:
-<?php echo $_SESSION['username']; ?>
-</h2>
+    <div class="logo-section">
 
-<h3>
-Role:
-<?php echo $_SESSION['role']; ?>
-</h3>
+        <img src="imgs/logo.png" width="80">
 
-<br>
+        <h2>LRPMS</h2>
 
-<a href="logout.php">Logout</a>
+        <p>Mil-an NHS</p>
+
+    </div>
+
+    <a href="dashboard.php">🏠 Dashboard</a>
+
+    <a href="learners.php">📚 Learner Profiles</a>
+
+    <a href="violation_encoding.php">⚠️ Violation Encoding</a>
+
+    <a href="#">📋 Case Monitoring</a>
+
+    <a href="pending_cases.php">⏳ Pending Cases</a>
+
+    <a href="#">🧠 Guidance Intervention</a>
+
+    <a href="#">📅 Teacher Availability</a>
+
+    <a href="#">📊 Reports & Analytics</a>
+
+    <a href="#">👥 User Management</a>
+
+    <a href="logout.php">🚪 Logout</a>
+
+</div>
+
+<div class="main-content">
+
+    <div class="top-header">
+
+        <div>
+
+            <h1>Mil-an National High School</h1>
+
+            <p>Learner Rights and Protection Monitoring System</p>
+
+        </div>
+
+        <div class="user-box">
+
+            <strong>
+                <?php echo $_SESSION['username']; ?>
+            </strong>
+
+            <br>
+
+            <?php echo $_SESSION['role']; ?>
+
+        </div>
+
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h2>0</h2>
+
+            <p>Total Learners</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>0</h2>
+
+            <p>Total Violations</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>0</h2>
+
+            <p>Pending Cases</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>0</h2>
+
+            <p>Resolved Cases</p>
+
+        </div>
+
+    </div>
+
+    <div class="activity-card">
+
+        <h2>Recent Activities</h2>
+
+        <ul>
+
+            <li>Nazarene Del Rosario - Bullying Case Submitted</li>
+
+            <li>Guesdan John Moises - Guidance Intervention Scheduled</li>
+
+            <li>Case #001 Marked Resolved</li>
+
+        </ul>
+
+    </div>
+
+</div>
 
 </body>
 </html>
